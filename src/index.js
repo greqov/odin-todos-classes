@@ -1,4 +1,8 @@
 import './reset.css';
 import './styles.css';
 
-console.log('such coding!!!');
+import Todo from './Todo';
+
+const todo = new Todo({ title: 'the first one', priority: 'high' });
+
+console.log(todo);
