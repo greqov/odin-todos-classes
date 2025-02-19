@@ -12,5 +12,7 @@ defaultData.forEach((todo) => {
   project.addTodo(new Todo(todo));
 });
 
+project.removeTodo(101);
+
 console.log(project);
 console.log(todo);
