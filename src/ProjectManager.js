@@ -1,23 +1,27 @@
+import Project from "./Project";
+
 export default class ProjectManager {
-  constructor() {
-    this.projects = [];
-    this.currentProjectId = null;
-  }
+  #currentProject = null;
+  projects = [];
 
   addProject(project) {
     this.projects.push(project);
-    this.currentProjectId = project.id;
+    this.currentProject = project;
   }
 
-  getCurrentProject() {
-    return this.projects.find(
-      (project) => project.id === this.currentProjectId
-    );
+  /**
+   * @param {import("./Project").default} project
+   */
+
+  set currentProject(project) {
+    if (!(project instanceof Project)) {
+      throw new Error('Failed attempt to set non-project object as current project');
+    }
+    this.#currentProject = project;
   }
 
-  setCurrentProject(projectId) {
-    // TODO: check if project with projectId even exist
-    this.currentProjectId = projectId;
+  get currentProject() {
+    return this.#currentProject;
   }
 
   // add,
