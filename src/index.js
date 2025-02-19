@@ -12,7 +12,8 @@ defaultData.forEach((todo) => {
   project.addTodo(new Todo(todo));
 });
 
-project.removeTodo(101);
+project.updateTodo(101, { title: 'create a Todo class', done: true });
+
+// project.removeTodo(101);
 
 console.log(project);
-console.log(todo);
