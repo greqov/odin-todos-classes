@@ -1,5 +1,5 @@
 [
   { "title": "the first one", "priority": "high" },
   { "title": "do nothing", "priority": "low" },
-  { "id": 101}
+  { "id": 101 }
 ]

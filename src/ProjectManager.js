@@ -1,4 +1,4 @@
-import Project from "./Project";
+import Project from './Project';
 
 export default class ProjectManager {
   #currentProject = null;
@@ -15,7 +15,9 @@ export default class ProjectManager {
 
   set currentProject(project) {
     if (!(project instanceof Project)) {
-      throw new Error('Failed attempt to set non-project object as current project');
+      throw new Error(
+        'Failed attempt to set non-project object as current project',
+      );
     }
     this.#currentProject = project;
   }

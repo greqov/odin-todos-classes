@@ -5,7 +5,7 @@ export default class Todo {
     title = 'untitled',
     description = '',
     dueDate = new Date(),
-    priority = 'middle'
+    priority = 'middle',
   }) {
     this.id = id;
     this.done = done;
